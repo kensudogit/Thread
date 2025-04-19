@@ -6,15 +6,13 @@ import SpreadSheet from './components/spread_sheet'
 
 const App = () => {
   const [count, setCount] = useState(0)
+  const [rows, setRows] = useState([])
 
   return (
     <div>
-      <h2>スレッド投稿管理</h2>
       <SpreadSheet /> 
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <label>行数: {rows.length}</label>
       </div>  
     </div>
   )
